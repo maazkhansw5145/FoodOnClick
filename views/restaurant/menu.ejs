@@ -1,0 +1,44 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div id="resCard">
+    <div class="container">
+        <h2 id="FMBanner">Food Menu of <%= restaurant.restaurant_name %> </h2>
+        <div class="row">
+            
+            <% for(var i = 0 ; i < item.length ; i++) { %>
+                
+            <div class="col-md-3">
+                <div class="thumbnail" id="RCard">
+                    <img style="width: 120px; height : 100px; " class="img-responsive" src="/uploads/item/<%= item[i].image_name %>">
+                    <div class="caption-pull">
+
+                        <h4><%= item[i].item_name %></h4>
+                        <h4 class=""><%= item[i].item_price %></h4>
+                        <div class="ui rating">item.ratings</div>
+                        <br>
+                        <br>
+                        <p>item.reviews </p>
+                        <%= console.log(item[i].item_id); %>
+                        <a href="/item/order/<%= item[i].item_id %>/<%= email_id %>" class="ui button blue">Order</a>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/rating.min.js"></script>
+
+
+<script type="text/javascript">
+    $('.rating').rating();
+</script>
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,43 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div id="resCard">
+    <div class="container">
+        <div class="row">
+                <div style="width:30%; margin:40px 0 0 500px;" >
+                    <div class="col-md-9">             
+                        <h1><%= customer.first_name  + " " + customer.last_name %></h1>
+
+                        <img class="ui small circular image" src="/uploads/customer/<%= customer.image_name %>">
+                        <div>
+                            <br>
+                            <label>Mobile Number<label>
+                            <h3><%= customer.phone_number %></h3>
+                            
+                            <label>Email Address<label>
+                            <h3><%= customer.email_id %></h3>
+
+                            <label>Country<label>
+                            <h3><%= customer.country %></h3>
+
+                            <label>City<label>
+                            <h3><%= customer.name %></h3>
+
+                            <label>Your Address<label>
+                            <h3><%= customer.address %></h3>
+
+                            <a href="/customer/profile/edit/<%= customer.email_id %>" class="ui button blue">Edit Profile</a>
+                            <a href="/" class="ui button pink">Logout</a>
+                            <a href="/customer/list/<%= customer.email_id %>/<%= customer.city_city_id %>" class="ui button green" style="margin-top: 5px; width: 90%;">Find Food</a>
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>

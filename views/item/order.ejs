@@ -1,0 +1,47 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div id="resCard">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">             
+                <!-- <h1 style="color:rgb(209, 195, 5)"><%= restaurant.restaurant_name %></h1> -->
+                <form action="/item/order/<%= restaurant.restaurant_id %>/<%= item.item_id %>/<%= email_id %>" method="post"class="ui form sizing">
+                    <img style="width: 120px; height : 100px; " class="img-responsive" src="/uploads/item/<%= item.image_name %>">
+                    <br>
+                    
+                    <div class="two fields">
+                        <div class="ui field">
+                            <label for="">Item Cost : </label>
+                            <input type="text" name="order[itemPrice]" value="<%= item.item_price %>" readonly>
+                        </div>
+                        
+                        <div class="ui field">
+                            <label for="">Deilvery Fee :</label>        
+                            <input type="text" name="order[deilveryFee]" value="<%= restaurant.fee %>" readonly>
+                        </div>
+                    </div>
+
+                    <% var totalCost = Number(item.item_price) + Number(restaurant.fee) %>
+                    <div class="ui field">
+                        <label for="">Total cost :</label>
+                        <input type="text" name="order[toatalCost]" value="<%= totalCost %>" readonly>
+                    </div>
+                    
+                    <% var today = new Date(); %>
+                    <% var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(); %>
+                    <% var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(); %>
+                    <% var dateTime = time+' '+ date; %>
+                    <%= console.log(typeof dateTime) %>
+                    <div class="ui field">
+                        <label>Time : </label>
+                        <input type="text" name="order[time]" value="<%= dateTime %>" readonly>
+                    </div>
+                    <button class=" ui button green" id="submit-button">Confirm order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,70 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div id="resCard">
+    <div class="container">
+        <div style="width:30%; margin:40px auto;" >
+            <form action="/customer/profile/edit/<%= customer.email_id %>" method="POST" class="ui form sizzing">
+            
+                <div class="form-group">
+                    <input class="form-control" type="text" name="customer[first_name]" value="<%= customer.first_name %>">
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" name="customer[last_name]" value="<%= customer.last_name %>">
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="customer[image_name]" value="<%= customer.image_name %>">
+                </div>                
+
+                <div class="form-group">
+                    <input class="form-control" type="email" name="customer[email_id]" value="<%= customer.email_id %>" readonly>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="tel" name="customer[phone_number]" value="<%= customer.phone_number %>">
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="customer[address]" value="<%= customer.address %>">
+                </div>
+
+                <div class="ui field">
+                    <label for="customer[city]">Select your city</label>
+                    <select name="customer[city]">
+                        <option value="1">Islamabad</option>
+                        <option value="2">Mingora</option>
+                        <option value="3">Karachi</option>
+                        <option value="4">Lahore</option>
+                        <option value="5">Peshawar</option>
+                        <option value="6">Queeta</option>
+                    </select>
+                </div>
+        
+                <div class="ui field">
+                    <label for="customer[country]">Select your country</label>
+                    <select name="customer[country]">
+                        <option value="1">Pakistan</option>
+                        <option value="2">India</option>
+                        <option value="3">United States</option>
+                        <option value="4">Afghanistan</option>
+                        <option value="5">United Arab Emarities</option>
+                        <option value="6">Bangladesh</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="password" name="customer[password]" value="<%= customer.password %>">
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Done</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

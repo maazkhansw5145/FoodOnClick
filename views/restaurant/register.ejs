@@ -1,0 +1,138 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+<div class="ui container">
+    <h2 id="registrationBanner">You Prepare The Food We Handle The Rest</h2>
+    <br>
+    <form action="/restaurant/register" method="POST" class="ui form sizing">
+        
+        <div class="ui field">
+            <label for="registration[name]">Restaurant Name</label>
+            <input type="text" name="registration[name]" placeholder="e.g  Queeta Cafe Hostel City" required>
+        </div>
+
+        <div class="ui field">
+            <label for="registration[city]">Select your city</label>
+            <select name="registration[city]">
+                <option value="1">Islamabad</option>
+                <option value="2">Mingora</option>
+                <option value="3">Karachi</option>
+                <option value="4">Lahore</option>
+                <option value="5">Peshawar</option>
+                <option value="6">Queeta</option>
+            </select>
+        </div>
+
+        <div class="ui field">
+            <label for="registration[managerName]">Manager Name</label>
+            <input type="text" name="registration[managerName]" placeholder="e.g  Maaz Khan" >
+        </div>
+
+        <div class="ui field">
+            <label for="registration[image_name]">Image Name</label>
+            <input type="text" name="registration[image_name]" placeholder="e.g  QueetaCafe.jpg" >
+        </div>
+
+
+        <div class="ui field">
+            <label for="registration[contactNumber]">Contact Number</label>
+            <input type="text" name="registration[contactNumber]" placeholder="e.g  03479235145"> 
+        </div>
+
+        <div class="ui field">
+            <label for="registration[email_id]">Email address</label>
+            <input type="text" name="registration[email_id]" placeholder="e.g  maazkhansw@gmail.com">
+        </div>
+
+        <div class="ui form">
+            <label for="registration[avg_cost]">Select average cost per meal</label>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio"  checked="" name="registration[avg_cost]" value="1"/>
+                    <label>Rs 100</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio" name="registration[avg_cost]" value="2"/>
+                    <label>Rs 300</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui checkbox">
+                <input type="radio" name="registration[avg_cost]" value="3"/>
+                <label>Rs 500</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui field">
+            <label for="registration[category]">Select your Restaurant's Category</label>
+            <select name="registration[category]">
+                <option value="1">Fast Food</option>
+                <option value="2">Casual Dining</option>
+                <option value="3">Family Style</option>
+                <option value="4">Restaurant</option>
+                <option value="5">Cafeteria</option>
+                <option value="6">Coffee House</option>
+            </select>
+        </div>
+        <div class="ui form">
+            <label for="registration[price]">Select Delivery Fee</label>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio"  checked="" name="registration[deliveryFee]" value="1"/>
+                    <label>Rs 30</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio" name="registration[deliveryFee]" value="2"/>
+                    <label>Rs 50</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio" name="registration[deliveryFee]" value="3"/>
+                    <label>Rs 70</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio" name="registration[deliveryFee]" value="4"/>
+                    <label>Rs 100</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio" name="registration[deliveryFee]" value="5"/>
+                    <label>Rs 150</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio" name="registration[deliveryFee]" value="6"/>
+                    <label>Rs 200</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ui field">
+            <label for="registration[password]">Password</label>
+            <input type="password" name="registration[password]" placeholder="Enter Your Password">
+        </div>
+
+        <button class=" ui button blue" id="submit-button">Submit Form</button>
+    </form>
+    <p id="alreadyAccount">
+        Already register?
+        <a href="/restaurant/login">Manager's Console</a>
+    </p>
+</div>
+
+<% include ../partials/footer.ejs %>

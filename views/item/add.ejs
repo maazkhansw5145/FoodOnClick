@@ -1,0 +1,62 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div class="ui container">
+    <h1 id="banner">Add Food Item</h1>
+    <form action="/item/add/ <%= restaurant_id %>" method="POST" class="ui form sizing">
+        <div class="form-group">
+            <img class="ui small image" src="/images/hamburger.png">
+        </div>
+
+        
+        <div class="ui field">
+            <input type="text" name="item[image_name]" placeholder="Image_Name" required>
+        </div>
+
+        <div class="ui field">
+            <input type="text" name="item[name]" placeholder="Food Name" required>
+        </div>
+
+        <div class="ui field">    
+            <input type="text" name="item[price]" placeholder="Price" required>
+        </div>
+
+        <div class="ui form">
+            <label for="item[permissibilty]">permissibilty</label>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio"  checked="" name="item[permissibilty]" value="1"/>
+                    <label>Halal</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="radio" name="item[permissibilty]" value="2"/>
+                    <label>Haram</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui field">
+            <label for="item[category]">Select your Item's Category</label>
+            <select name="item[category]">
+                <option value="1">Spicy</option>
+                <option value="2">Fast Food</option>
+                <option value="3">Sea Food</option>
+                <option value="4">Vegetables</option>
+                <option value="5">Meat</option>
+                <option value="6">Local</option>
+                <option value="7">Afghan</option>
+                <option value="8">Break Fast</option>
+                <option value="9">Rice</option>
+                <option value="10">Drinks</option>
+            </select>
+        </div>
+
+
+        <button class=" ui button blue" id="submit-button">Add</button>
+    </form>
+</div>
+<% include ../partials/footer.ejs %>

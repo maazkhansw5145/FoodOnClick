@@ -1,0 +1,48 @@
+<% include ./partials/header.ejs %>
+
+<a href="/customer/signup" class="ui right floated button yellow inline" id="homepageBtn">Sign Up</a>
+<a href="/customer/login" class ="ui right floated button blue inline" id="homepageBtn">Log In</a>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+    
+<header>
+    <div class="ui container ">  
+        <h1 id="homepageHeader">It's The Food You love, We Deliver</h1>
+
+        <div class="ui form" id="citySelection">
+            <h3>The Cities In Which We Deliver Food, Check Yours,</h3>
+            <div class="ui field">
+                <select name="registration[city]">
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Mingora">Mingora</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Queeta">Queeta</option>
+                </select>
+                <a class="ui button pink" id="findFood" href="/customer/login">Find Food</a>
+            </div>            
+        </div>
+        
+        <div id="jumbotron">
+            <h2 id="registrationJumboBanner">Join our platform to reach out more customers</h2>
+            <p>If you believe your food deserves more eaters but your are not getting them.<br> <br>
+                No problem we are here to help you.<br> <br>    
+                Register your restaurant here and sharp your
+                chiefs to handle a bunch of customers.
+            </p>
+            <div >
+                <a href="/restaurant/register" class="ui floated button green inline ">
+                    REGISTER
+                </a>
+                <a href="/restaurant/login" class="ui  floated button blue inline">
+                    Manager Console
+                </a>
+            </div>                    
+            
+        </div>
+        
+    </div>
+    <% include ./partials/footer.ejs %>
+</header>
+

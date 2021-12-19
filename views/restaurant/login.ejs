@@ -1,0 +1,24 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div class="ui container">
+    <h1 id="banner">LOG IN</h1>   
+    <form action="/restaurant/login" method="POST" class="ui form sizing">
+        <div class="ui field">
+            <input type="email" name="login[username]" placeholder="Email" required>
+        </div>
+
+        <div class="ui field">
+            <input type="password" name="login[password]" placeholder="Password" required>
+        </div>
+        <button class=" ui button blue" id="submit-button">Log in</button>
+    </form>
+
+    <p id="registerHere">   
+        Don't have register your restaurant yet? 
+        <a href="/restaurant/register"> Register Here</a>
+    </p>
+</div>
+
+<% include ../partials/footer.ejs %>

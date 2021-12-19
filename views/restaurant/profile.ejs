@@ -1,0 +1,40 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+<div id="resCard">
+    <div class="container">
+        <div style="width:30%; margin:40px auto;" >     
+            <h2 ><%= restaurant.restaurant_name %></h2>
+            <img class="ui small image" src="/uploads/restaurant/<%= restaurant.image_name %>">
+            <br>
+            <div>
+                <h5>Manager Name</h5> 
+                <p><%= restaurant.manager_name %><h4>
+
+                <h5 >City</h5>
+                <p><%= restaurant.city_name %><p>
+
+                <h5>Category</h5>
+                <p><%= restaurant.category %></p>
+                
+                <h5>Average Cost Per Meal</h5>
+                <p><%= restaurant.cost %></p>
+                
+                <h5>Delivery Fee</h5>
+                <p><%= restaurant.fee %></p>
+
+                <h5>Contact No</h5>       
+                <p><%= restaurant.phone_number %></p>
+
+                <h5>Email</h5>
+                <p><%= restaurant.email_id %></p>
+
+                <a href="/" class="ui button pink">Log Out</a>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

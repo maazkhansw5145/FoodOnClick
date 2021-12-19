@@ -1,0 +1,34 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div id="resCard">
+    <div class="container">
+        <h2 id="FMBanner" style="color:rgba(150, 7, 79, 0.76);">Restaurants in <%= city.name %> 
+            
+        </h2>
+        <div class="row">
+            <% for(var i = 0 ; i < list.length ; i++) { %>
+
+            <div class="col-md-3 ">
+                <div class="thumbnail list" id="RCard">
+                    <h3><%= list[i].restaurant_name %></h3>
+
+                    <img style="width: 100%; height : 150px; " class="img-responsive" src="/uploads/restaurant/<%= list[i].image_name %>">
+                    <div class="caption-pull">
+                        <p>Category : <strong><%= list[i].category %></strong></p>
+                        <p>Average Cost Per Meal : <strong><%= list[i].cost %></strong></p>
+                        <p>Delivery charges : <strong><%= list[i].fee %></strong></p>
+                        <p>Manager's Phone Number</p>
+                        <p><strong><%= list[i].phone_number %></strong></p>
+                        <a href="/restaurant/menu/<%= list[i].manager_email_id %>/<%= email_id %>" class="ui button blue">Visit</a>
+                    </div>
+                </div> 
+            </div>
+
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

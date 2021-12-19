@@ -1,0 +1,42 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div id="resCard">
+    <div class="container">
+        <h2 id="FMBanner">Availible Restaurants In Your City</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail" id="RCard">
+                    <img class="img-responsive" src="/images/hamburger.png">
+                    <div class="caption-pull">
+                        <h4 class="pull-right"><strong>Rs <%= restaurant.price%> /Avg Meal</strong></h4>
+                        <br>
+                        <h4><strong><%= restaurant.name></strong></h4>
+                        <h4 ><strong>Timing <%= restaurant.time></strong></h4>
+                        <p><%= restaurant.description></p>
+                        <br>
+                        <div class="ui rating"></div>
+                        <br>
+                        <br>
+                        <p>Reviews</p>
+                        <a href="/restaurant/menu:/<%= restaurant_id" class="ui button blue">Food Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/rating.min.js"></script>
+
+
+<script type="text/javascript">
+    $('.rating').rating();
+</script>
+
+<% include ../partials/footer.ejs %>

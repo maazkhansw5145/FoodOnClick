@@ -1,0 +1,129 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+<div id="resCard">
+    <div class="container">
+        <div style="width:30%; margin:40px auto;">
+            <form action="/restaurant/profile/edit/<%= restaurant.email_id %>" method="POST">
+                <h2 id="registrationBanner">Edit Your Restaurant's Profile</h2>                
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="restaurantProfile[name]" value="<%= restaurant.restaurant_name %>">
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="restaurantProfile[manager_name]" value="<%= restaurant.manager_name %>">
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="restaurantProfile[image_name]" value="<%= restaurant.image_name %>">
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="tel" name="restaurantProfile[phone_number]" value="<%= restaurant.phone_number %>">
+                </div>
+
+                <div class="ui field">
+                    <label for="restaurantProfile[city]">Select your city</label>
+                    <select name="restaurantProfile[city]">
+                        <option value="1">Islamabad</option>
+                        <option value="2">Mingora</option>
+                        <option value="3">Karachi</option>
+                        <option value="4">Lahore</option>
+                        <option value="5">Peshawar</option>
+                        <option value="6">Queeta</option>
+                    </select>
+                </div>
+        
+
+                <div class="ui form">
+                    <label for="restaurantProfile[avg_cost]">Select average cost per meal</label>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio"  checked="" name="restaurantProfile[avg_cost]" value="100"/>
+                            <label>Rs 100</label>
+                        </div>
+                    </div>
+        
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio" name="restaurantProfile[avg_cost]" value="300"/>
+                            <label>Rs 300</label>
+                        </div>
+                    </div>
+        
+                    <div class="field">
+                        <div class="ui checkbox">
+                        <input type="radio" name="restaurantProfile[avg_cost]" value="500"/>
+                        <label>Rs 500</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="ui field">
+                    <label for="restaurantProfile[category]">Select your Restaurant's Category</label>
+                    <select name="restaurantProfile[category]">
+                        <option value="1">Fast Food</option>
+                        <option value="2">Casual Dining</option>
+                        <option value="3">Family Style</option>
+                        <option value="4">Lahore</option>
+                        <option value="5">Cafeteria</option>
+                        <option value="6">Coffee House</option>
+                    </select>
+                </div>
+                <div class="ui form">
+                    <label for="restaurantProfile[deliveryFee]">Select Delivery Fee</label>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio"  checked="" name="restaurantProfile[deliveryFee]" value="1"/>
+                            <label>Rs 30</label>
+                        </div>
+                    </div>
+        
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio" name="restaurantProfile[deliveryFee]" value="2"/>
+                            <label>Rs 50</label>
+                        </div>
+                    </div>
+        
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio" name="restaurantProfile[deliveryFee]" value="3"/>
+                            <label>Rs 70</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio" name="restaurantProfile[deliveryFee]" value="4"/>
+                            <label>Rs 100</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio" name="restaurantProfile[deliveryFee]" value="5"/>
+                            <label>Rs 150</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="radio" name="restaurantProfile[deliveryFee]" value="6"/>
+                            <label>Rs 200</label>
+                        </div>
+                    </div>
+        
+                <div class="form-group">
+                    <input class="form-control" type="password" name="restaurantProfile[password]" value="<%= restaurant.password %>">
+                </div>
+                
+              
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Done</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

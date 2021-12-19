@@ -1,0 +1,73 @@
+<% include ../partials/header.ejs %>
+<!-- DIV FROM HEADER IS HERE -->
+</div>
+
+<div class="ui container">
+    <h1 id="banner">Sign Up</h1>
+        <form action="/customer/signup" method="POST" enctype="multipart/form-data" action="/upload" class="ui form sizing">
+        <div class="two fields">
+            <div class="ui field">
+                <input type="text" name="signup[firstName]" placeholder="First Name" required>
+            </div>
+            <div class="ui field">
+                <input type="text" name="signup[lastName]" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="ui field">
+            <input type="email" name="signup[email]" placeholder="Email" required>
+        </div>
+
+        <div class="ui field">
+            <input type="tel" name="signup[phone_number]" placeholder="Mobile Number" required>
+        </div>
+
+        <div class="ui field">    
+            <input type="file" name="signup[image_name]" accept="image/*">
+            <input type="submit" name="signup[image_name]" value="submit">
+        </div>
+
+        <div class="ui field">
+            <label for="signup[city]">Select your city</label>
+            <select name="signup[city]">
+                <option value="1">Islamabad</option>
+                <option value="2">Mingora</option>
+                <option value="3">Karachi</option>
+                <option value="4">Lahore</option>
+                <option value="5">Peshawar</option>
+                <option value="6">Queeta</option>
+            </select>
+        </div>
+
+        <div class="ui field">
+            <label for="signup[country]">Select your country</label>
+            <select name="signup[country]">
+                <option value="1">Pakistan</option>
+                <option value="2">India</option>
+                <option value="3">United States</option>
+                <option value="4">Afghanistan</option>
+                <option value="5">United Arab Emarities</option>
+                <option value="6">Bangladesh</option>
+            </select>
+        </div>
+
+        <div class="ui field">    
+            <input type="text" name="signup[address]" placeholder="Address" required>
+        </div>
+
+        <div class="ui field">    
+            <input type="password" name="signup[password]" placeholder="Password" required>
+        </div>
+        
+        
+        <button class=" ui button blue" id="submit-button">SIGN UP</button>
+    </form>
+
+    <p id="alreadyAccount">
+        Already having an account?
+        <a href="/customer/login">Login</a>
+    </p>
+
+</div>
+<% include ../partials/footer.ejs %>
+
