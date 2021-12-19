@@ -1,0 +1,141 @@
+body{
+    background-color: rgb(235, 238, 226);
+}
+
+.homepageBanner{
+    background-color: rgb(36, 28, 28);
+}
+
+#banner{
+    margin: 20px 0 20px 540px; 
+}
+
+#registrationBanner{
+    margin: 20px 0 20px 310px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(243, 7, 192, 0.644);
+    font-size: 30px;
+}
+
+.floatRight{
+    margin-bottom: 20px;
+}
+
+header{
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+}
+
+.inline{
+    display: inline;
+}
+
+.title{
+    color: rgb(228, 213, 2);
+    padding: 20px;
+}
+
+.sizing{
+    margin-left: 360px;
+    width: 40%;
+}
+
+#alreadyAccount{
+    margin: 0 0 0 500px ;
+}
+
+#signupHere{
+    margin-left:480px ;
+}
+
+#or{
+    margin-left: 570px;
+}
+
+#registerHere{
+    margin-left: 410px;
+}
+
+#submit-button{
+    margin-top: 10px;
+    width:100%;
+}
+
+#homepageBtn{
+    margin: 20px 8px 0 0;
+}
+
+#homepageHeader{
+    color: rgb(192, 3, 35);
+    padding-top: 40px;
+    margin-left: 280px;
+}
+
+#jumbotron{
+    width:50%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    border: 1px grey solid;
+    border-radius: 5%;
+    padding: 40px;
+    background-color: white;
+    font-size: 16px;
+    font-family: MuseoSans;
+}
+
+
+#registrationJumboBanner{
+    font-family: MuseoSans;
+    color: rgb(60, 60, 158);
+}
+
+#loginBtn{
+    margin: 100px 0 0 400px;
+    width:300px;
+}
+
+#citySelection{
+    margin: 60px 0 0 0;
+    width: 50%;
+}
+
+#findFood{
+    width:100%;
+    margin-top: 20px; 
+}
+
+#search{
+    font-family:MuseoSans;
+    margin: 30px 0 0 20px;
+    width: 30%;
+}
+#resCard{
+    background-color: rgb(235, 238, 226);
+}
+
+#FMBanner{
+    font-family:MuseoSans;
+    margin: 20px 0 20px 400px;
+}
+
+#RCard{
+    padding: 12px;
+}
+
+#footer{
+
+    background-color: rgb(36, 28, 28);
+    margin-top: 40px;
+    color: rgb(228, 213, 2);
+    height: 50px;
+}
+
+#footer-elements{
+    padding-top: 20px;
+    margin-left:580px;
+}
+ .list{
+     background-color: rgba(202, 199, 10, 0.158);
+ }
